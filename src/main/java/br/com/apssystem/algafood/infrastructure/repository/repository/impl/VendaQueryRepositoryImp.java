@@ -34,12 +34,10 @@ public class VendaQueryRepositoryImp implements VendaQuery {
         var root = query.from(Pedido.class);
 
 
-        //Função adaptada para o PostgreSQL é a TIMEZONE
         var functionConvertDataCriacao = builder.function(
                 "timezone", Date.class, builder.literal("+00:00"), root.get(DATA_CRIACAO));
 
 
-        //Não alterar devido a consulta ser realizar pelo PostgresSQL
         var functionDateDataCriacao = builder.function("TO_CHAR", String.class,
                 functionConvertDataCriacao,
                 builder.literal("dd/MM/yyyy"));

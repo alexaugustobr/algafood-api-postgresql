@@ -24,9 +24,8 @@
 		<java.version>11</java.version>
 		<model.mapper>2.4.4</model.mapper>
 		<springfox.version>2.9.2</springfox.version>
-		<jasperreports.version>6.16.0</jasperreports.version>
+		<jasperreports.version>6.20.0</jasperreports.version>
 		<aws-java-sdk-s3.version>1.12.63</aws-java-sdk-s3.version>
-		<spring-cloud.version>2020.0.4</spring-cloud.version>
 	</properties>
 
 	<dependencies>
@@ -145,10 +144,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-hateoas</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-openfeign</artifactId>
-		</dependency>
 
 	</dependencies>
 
@@ -171,16 +166,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>org.springframework.cloud</groupId>
-				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>${spring-cloud.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
 </project>
